@@ -7,15 +7,11 @@ scalaVersion := "2.10.0-RC1"
 crossVersion <<= scalaVersion { sv => if (sv contains "-") CrossVersion.full else CrossVersion.binary }
 
 resolvers ++= Seq(
-  "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/",
-  "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/",
-  Resolver.url(
-    "Typesafe Ivy Snapshots",
-    url("http://repo.typesafe.com/typesafe/ivy-snapshots/"))(Resolver.ivyStylePatterns)
+  "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
 )
 
 libraryDependencies ++= Seq(
-  "play" %% "play" % "2.1-SNAPSHOT"
+  "play" %% "play" % "2.1-RC1"
 )
 
 organization := "jp.t2v"
